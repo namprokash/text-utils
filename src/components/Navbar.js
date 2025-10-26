@@ -1,5 +1,5 @@
 // import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // props can be any name
 const Navbar = ({
@@ -21,7 +21,7 @@ const Navbar = ({
         }`}
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand" href="#">
             {title}
           </a>
           <button
@@ -38,15 +38,15 @@ const Navbar = ({
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <a className="nav-link active" aria-current="page" href="#">
                   Home
-                </Link>
+                </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/about">
                   {features}
                 </Link>
-              </li>
+              </li> */}
               {/* <li className="nav-item">
                 <a className="nav-link" href="/">
                   Pricing

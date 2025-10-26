@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import About from "./components/About";
+// import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextFrom from "./components/TextFrom";
 import Alerts from "./components/Alerts";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   // showing alerts
@@ -73,18 +73,24 @@ function App() {
 
   return (
     <div>
-      <Router>
-        {/* <Navbar /> */}
-        <Navbar
-          title="TitleHere"
-          features="About"
+      {/* <Navbar /> */}
+      <Navbar
+        title="TitleHere"
+        features="About"
+        mode={mode}
+        changeMode={changeMode}
+      />
+      <Alerts alert={alert} />
+      <div className="container my-3">
+        <TextFrom
+          showAlert={showAlert}
+          heading="Enter your text to analyze."
           mode={mode}
-          changeMode={changeMode}
         />
-        <Alerts alert={alert} />
+      </div>
 
-        {/* Switch start here */}
-
+      {/* Switch start here */}
+      {/*  <Router>
         <Routes>
           <Route path="/about" element={<About mode={mode} />} />
 
@@ -101,7 +107,7 @@ function App() {
             }
           />
         </Routes>
-      </Router>
+      </Router> */}
     </div>
   );
 }
